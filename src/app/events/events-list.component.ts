@@ -3,7 +3,6 @@ import { ToastrService } from '../commom/toastr.service';
 import { EventService } from './shared/event.service';
 
 @Component({
-  selector: 'app-events-list',
   template: `
     <div>
       <h1>Upcoming Angular Events</h1>
