@@ -21,4 +21,9 @@ export const appRoutes: Routes = [
   },
   { path: '404', component: Error404Component },
   { path: '', redirectTo: '/events', pathMatch: 'full' },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module')
+    .then(m => m.UserModule)
+  }
 ];
