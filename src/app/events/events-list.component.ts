@@ -17,7 +17,7 @@ import { EventService } from './shared/event.service';
   `,
 })
 export class EventsListComponent implements OnInit {
-  events: any;
+  events: Event[];
   constructor(
     private eventService: EventService,
     private toastr: ToastrService,
