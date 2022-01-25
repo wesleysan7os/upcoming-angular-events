@@ -16,6 +16,7 @@ import { EventsAppComponent } from './events-app.component';
 import { EventService } from './events/shared/event.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
@@ -33,6 +34,7 @@ import { appRoutes } from './routes';
     ToastrService,
     EventRouteActivator,
     EventListResolver,
+    AuthService,
     {
       provide: 'canDeactivateCreateEvent', useValue: checkDirtyState
     },

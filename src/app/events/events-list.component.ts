@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Event } from '../events/shared/event.model';
 import { ToastrService } from '../commom/toastr.service';
 import { EventService } from './shared/event.service';
 
@@ -17,7 +18,7 @@ import { EventService } from './shared/event.service';
   `,
 })
 export class EventsListComponent implements OnInit {
-  events: Event[];
+  events: Event;
   constructor(
     private eventService: EventService,
     private toastr: ToastrService,
